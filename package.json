@@ -1,0 +1,39 @@
+{
+  "name": "help",
+  "author": "Nicolas PICHON",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "path": {
+    "dist": "dist",
+    "src": "src"
+  },
+  "debug": "init,sequelize,route.*",
+  "scripts": {
+    "start": "DEBUG=$npm_package_debug nodemon $npm_package_path_src/$npm_package_main --exec babel-node",
+    "test": "mocha --require @babel/register 'src/**/**spec.js'"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "csv-parser": "^2.3.0",
+    "debug": "^4.1.1",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.0",
+    "path": "^0.12.7",
+    "pg": "^7.12.1",
+    "sequelize": "^5.18.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.6.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.2",
+    "sinon": "^7.4.2"
+  }
+}
